@@ -76,7 +76,7 @@ function transcribe() {
         const formData = new FormData();
 
         formData.append('audio', selectedRecording.blob);
-        fetch('/transcribe', {
+        fetch('/api/transcribe', {
             method: 'POST',
             body: formData,
             headers: {
@@ -114,7 +114,7 @@ function askQuestion() {
 
     appendMessage(question, 'user-message');
 
-    fetch('/ask', {
+    fetch('/api/ask', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
