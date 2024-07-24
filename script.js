@@ -76,7 +76,7 @@ function transcribe() {
         const formData = new FormData();
 
         formData.append('audio', selectedRecording.blob);
-        fetch('http://127.0.0.1:5000/transcribe', {
+        fetch('http://15.206.88.237/transcribe', {
             method: 'POST',
             body: formData,
             headers: {
