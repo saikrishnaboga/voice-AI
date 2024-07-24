@@ -114,7 +114,7 @@ function askQuestion() {
 
     appendMessage(question, 'user-message');
 
-    fetch('http://127.0.0.1:5000/ask', {
+    fetch('http://15.206.88.237/ask', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
