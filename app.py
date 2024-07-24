@@ -33,7 +33,7 @@ def transcribe_audio(file_path):
     result = model.transcribe(file_path, fp16=False)
     return result["text"]
 
-@app.route('/transcribe', methods=['POST'])
+@app.route('/api/transcribe', methods=['POST'])
 def transcribe_endpoint():
     if model is None:
         return jsonify({'error': 'Whisper model is not loaded correctly.'}), 500
@@ -60,7 +60,7 @@ def transcribe_endpoint():
             return jsonify({'error': 'An error occurred during transcription.'}), 500
 
 
-@app.route('/ask', methods=['POST'])
+@app.route('/api/ask', methods=['POST'])
 def ask():
     data = request.get_json()
     transcript = data['transcript']
