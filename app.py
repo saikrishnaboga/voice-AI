@@ -30,11 +30,14 @@ except Exception as e:
 
 
 def transcribe_audio(file_path):
+    print("entered audio")
     result = model.transcribe(file_path, fp16=False)
+    print(result)
     return result["text"]
 
 @app.route('/api/transcribe', methods=['POST'])
 def transcribe_endpoint():
+    print("Entered into transcribe")
     if model is None:
         return jsonify({'error': 'Whisper model is not loaded correctly.'}), 500
 
