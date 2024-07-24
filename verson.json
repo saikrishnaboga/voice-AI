@@ -13,11 +13,11 @@
   "routes": [
     {
       "src": "/api/transcribe",
-      "dest": "/api/transcribe.py"
+      "dest": "/api/app.py"
     },
     {
       "src": "/api/ask",
-      "dest": "/api/ask.py"
+      "dest": "/api/app.py"
     },
     {
       "src": "/(.*)",
